@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360度商品ビューアー</title>
+    <style>
+        #viewer {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        #viewer img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            /* transition: opacity 0.2s ease-in-out; */
+            pointer-events: none;
+        }
+        #viewer img.active {
+            opacity: 1;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="viewer">
+        <img src="./img/armani-bag-large-01-01.jpg" alt="画像1" class="active">
+        <img src="./img/armani-bag-large-01-02.jpg" alt="画像2">
+        <img src="./img/armani-bag-large-01-03.jpg" alt="画像3">
+        <img src="./img/armani-bag-large-01-04.jpg" alt="画像4">
+        <img src="./img/armani-bag-large-01-05.jpg" alt="画像5">
+        <img src="./img/armani-bag-large-01-06.jpg" alt="画像6">
+        <img src="./img/armani-bag-large-01-07.jpg" alt="画像7">
+        <img src="./img/armani-bag-large-01-08.jpg" alt="画像8">
+        <img src="./img/armani-bag-large-01-09.jpg" alt="画像9">
+        <img src="./img/armani-bag-large-01-10.jpg" alt="画像10">
+    </div>
+    <script src="viewer.js"></script>
+</body>
+</html>
